@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Navs">
+	<meta http-equiv="X-UA-Compatible" content="IE-edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+      <title>LETS ROCK</title>
+      <link href='https://fonts.googleapis.com/css?family=Akronim' rel='stylesheet'>
+      <style type="text/css">
+      *{
+      	margin: 0;
+      	padding: 0;
+      	-webkit-box-sizing:border-box;
+      	-moz-box-sizing:border-box;
+      	font-family: 'Cabin';
+      }	
+      body{
+      	/*background-image: url('img.jpg');
+      	background-repeat: no-repeat;
+      	background-attachment: fixed;
+      	background-size: 100% 100%;*/
+      background-image: linear-gradient(45deg,#108dc7,#ef8e38);      	
+      }
+     #main{
+      	width: 35%;
+      	margin:50px auto;
+      }
+
+      .login,.register{
+      	text-decoration: none;
+      	display: block;
+      	width:100%;
+      	background-color: #37474f;
+      	text-align: center;
+      	color:#fff;
+      	font-size:25px;
+      	padding: 10px;
+      	position: absolute;
+      	top:-250px;
+      	
+      }
+.active,.register{
+	background-color: black;
+	color: #000;
+
+}
+.content,.other{
+	width: 100%;
+	background-color: #eee;
+	padding: 20px 30px 30px 30px;
+
+		box-shadow: 2px 2px 5px #333;
+	display: none;
+ 
+ }
+
+.inp{
+	width: 100%;
+	display: block;
+	
+	margin-bottom: 15px;
+	font-size: 20px;
+	border: 2px solid #888;
+	border-bottom: 5px solid #888;
+	background-color: #fff;
+	
+	box-sizing: border-box;
+	
+	background:#ffffff28;
+	border:1px solid white;
+	padding:10px 20px;
+	color: white;
+	outline: none;
+	margin: 10px 0;
+	border-radius: 6px;
+}
+.inp:focus{
+	outline: none;
+	border: 2px solid #555;
+	border-bottom: 5px solid #555;
+}/*
+#login-box
+{
+	background-color: #888;
+}
+#reg-box
+{
+	background-color: #888;
+}*/
+#tab-btn{
+   margin=0;
+   padding=0;
+   font-family: consolas;
+   box-sizing: border-box;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+   flex-direction: row;
+
+}
+
+
+#tab-btn1{
+	position: relative;
+	display: inline-block;
+	padding: 25px 30px;
+	margin: 40px 0;
+	color: #03e9f4;
+	font-size: 24px;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: 0.5s;
+	letter-spacing: 4px;
+	
+    overflow: hidden;
+	-webkit-box-reflect:below 1px linear-gradient(transparent,#0005);
+	
+}
+#tab-btn1:hover
+{
+	background: #03e9f4;
+	color: #050801;
+	box-shadow: 0 0 5px #03e9f4,
+	            0 0 25px #03e9f4,
+	            0 0 50px #03e9f4,
+	            0 0 200px #03e9f4;
+}
+#tab-btn2{
+	position: relative;
+	display: inline-block;
+	padding: 25px 30px;
+	margin: 40px 0;
+	color: #03e9f4;
+	font-size: 24px;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: 0.5s;
+	letter-spacing: 4px;
+overflow: hidden;
+
+	-webkit-box-reflect:below 1px linear-gradient(transparent,#0005);
+
+}
+
+#tab-btn1:nth-child(1)
+{
+	filter: hue-rotate(290deg);
+}
+#tab-btn2:nth-child(3)
+{
+	filter: hue-rotate(290deg);
+}
+#tab-btn2:hover
+{
+	background: #03e9f4;
+	color: #050801;
+	box-shadow: 0 0 5px #03e9f4,
+	            0 0 25px #03e9f4,
+	            0 0 50px #03e9f4,
+	            0 0 200px #03e9f4;
+}
+#tab-btn1 span
+{
+	position: absolute;
+	display: block;
+}
+#tab-btn1 span:nth-child(1)
+{
+	top: 0%;
+	left: -100%;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(90deg,transparent,#03e9f4);
+	animation: animate1 2s linear infinite;
+}
+@keyframes animate1
+{
+	0%
+	{
+		left: -100%
+	}
+	50%,100%
+	{
+		left: 100%
+	}
+}
+#tab-btn1 span:nth-child(2)
+{
+	top: -100%;
+	right: 0;
+	width: 2px;
+	height: 100%;
+	background: linear-gradient(180deg,transparent,#03e9f4);
+	animation: animate2 2s linear infinite;
+	animation-delay: 0.25s;
+}
+@keyframes animate2
+{
+	0%
+	{
+		top: -100%
+	}
+	50%,100%
+	{
+		top: 100%
+	}
+}
+#tab-btn1 span:nth-child(3)
+{
+	bottom: 0;
+	right: -100%;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(270deg,transparent,#03e9f4);
+	animation: animate3 2s linear infinite;
+	animation-delay: 0.25s;
+}
+@keyframes animate3
+{
+	0%
+	{
+		right: -100%
+	}
+	50%,100%
+	{
+		right: 100%
+	}
+}
+#tab-btn1 span:nth-child(4)
+{
+	bottom: -100%;
+	left: 0;
+	width: 2px;
+	height: 100%;
+	background: linear-gradient(360deg,transparent,#03e9f4);
+	animation: animate4 2s linear infinite;
+	animation-delay: 0.25s;
+}
+@keyframes animate4
+{
+	0%
+	{
+		bottom: -100%
+	}
+	50%,100%
+	{
+		bottom: 100%
+	}
+}
+#tab-btn2 span
+{
+	position: absolute;
+	display: block;
+}
+#tab-btn2 span:nth-child(1)
+{
+	top: 0%;
+	left: -100%;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(90deg,transparent,#03e9f4);
+	animation: animate1 2s linear infinite;
+}
+@keyframes animate1
+{
+	0%
+	{
+		left: -100%
+	}
+	50%,100%
+	{
+		left: 100%
+	}
+}
+#tab-btn2 span:nth-child(2)
+{
+	top: -100%;
+	right: 0;
+	width: 2px;
+	height: 100%;
+	background: linear-gradient(180deg,transparent,#03e9f4);
+	animation: animate2 2s linear infinite;
+	animation-delay: 0.25s;
+}
+@keyframes animate2
+{
+	0%
+	{
+		top: -100%
+	}
+	50%,100%
+	{
+		top: 100%
+	}
+}
+#tab-btn2 span:nth-child(3)
+{
+	bottom: 0;
+	right: -100%;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(270deg,transparent,#03e9f4);
+	animation: animate3 2s linear infinite;
+	animation-delay: 0.25s;
+}
+@keyframes animate3
+{
+	0%
+	{
+		right: -100%
+	}
+	50%,100%
+	{
+		right: 100%
+	}
+}
+#tab-btn2 span:nth-child(4)
+{
+	bottom: -100%;
+	left: 0;
+	width: 2px;
+	height: 100%;
+	background: linear-gradient(360deg,transparent,#03e9f4);
+	animation: animate4 2s linear infinite;
+	animation-delay: 0.25s;
+}
+@keyframes animate4
+{
+	0%
+	{
+		bottom: -100%
+	}
+	50%,100%
+	{
+		bottom: 100%
+	}
+}
+
+#sub-btn{
+	width:100%;
+	padding:12px;
+	margin-top: 10px;
+	background-color: black;
+	color: #03e9f4;
+	display: inline-block;
+	border:none;
+	transition: 0.5s;
+	letter-spacing: 4px;
+	border-radius: 50px;
+	border:50px;
+	border-color: red;
+	-webkit-box-reflect:below 1px linear-gradient(transparent,yellow);
+}
+#sub-btn:hover
+{
+	background: #03e9f4;
+	color: #050801;
+	box-shadow: 0 0 5px #03e9f4,
+	            0 0 25px #03e9f4,
+	            0 0 50px #03e9f4,
+	            0 0 200px #03e9f4;
+}
+
+#sub-btn:focus{
+	outline: none;
+	background-color: red;
+}
+#sub-btn:active{
+	border:none;
+	margin-top: 5px;
+}
+h2{
+	text-align: center;
+	padding-bottom: 15px;
+	color:#333;
+	font-size: 30px;
+	font-variant: small-caps;
+}
+.content,.other
+{
+	
+    margin: 0 auto;
+width: 100%;
+height: 100%;
+background-image: linear-gradient(45deg,#9fbaa8,#31354c);
+transition: 0.4s;
+position: relative;
+top: -450px;
+}
+.form1,.form2
+{
+	color: white;
+}
+.content,.other h1{
+	font-weight: 400;
+	margin-top: 0;
+}
+footer a
+{
+text-decoration: none;
+    color:#262626;
+    
+
+}
+.seperator
+{
+    color: #FFFFFF;
+    font-size: 20px;
+}
+
+
+
+
+
+
+       </style>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript"> 
+  $(document).ready(function(){
+  $(".login").click(function(){
+
+  	$(".content").show();
+  		$(".other").hide();
+
+  	 
+  });
+   $(".register").click(function(){
+
+  	$(".content").hide();
+  		$(".other").show();
+  });
+
+
+  });
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+</head>
+<body>
+	<div id="main">
+		
+		<div id="tab-btn">
+			<a id="tab-btn1" href="#" class="login active">SIGN IN
+              	<span></span>
+			<span></span>
+             <span></span>
+             <span></span>
+
+
+			</a>
+			&nbsp
+			
+			<a id="tab-btn2" href="#" class="register">SIGN UP
+
+
+               	<span></span>
+			<span></span>
+             <span></span>
+             <span></span>
+
+			</a>
+					
+		</div>
+		<div class="content">
+			<h2>Get Started!</h2>
+			<form action="#" method="post" id="login-box" class="form1">
+				<input type="text" name="username" placeholder="Username" class="inp" required autofocus><br>
+					<input type="password" name="password" placeholder="Password" class="inp" required><br>
+					<a href="#" id="forgot">Forgot Password?</a><br>
+					<input type="submit" name="submit" value="SIGN IN" id="sub-btn">
+
+
+			</form>
+		</div>
+
+	
+<div class="other">
+
+	<h2>Register With Is!</h2>
+	<form action="#" method="post" id="reg-box" class="form2">
+		<input type="text" name="uname" placeholder="Enter Username" class="inp" required autofocus><br>
+		<input type="email" name="email" placeholder="Enter Email" class="inp" required><br>
+		<input type="password" name="pass" placeholder="Enter Password" class="inp" required><br>
+        <input type="submit" name="submit" value="SIGN UP" id="sub-btn">
+
+</form>
+
+	
+</div>
+</div>
+
+
+
+
+
+
+<footer>
+        &copy;WEBPLAYER &nbsp;<span class="seperator">|</span> DESIGNED BY     
+            <a href="http://www.navs.com">NAVEEN & MUKHEEM</a>
+        
+        
+        
+        </footer>
+	
+
+</body>
+</html>
